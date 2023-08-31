@@ -14,7 +14,7 @@ namespace Feedback.RazorPages.Pages.Feedbacks
     public class Index : PageModel
     {
         private readonly AppDbContext _context;
-        public List<FeedbackModel> EventList { get; set; } = new();
+        public List<FeedbackModel> FeedbackList { get; set; } = new();
 
         public Index(AppDbContext context)
         {
@@ -23,13 +23,11 @@ namespace Feedback.RazorPages.Pages.Feedbacks
 
         public async Task<IActionResult> OnGetAsync()
         {
-            var eventsFromDb = await _context.Feedbacks.ToListAsync();
-            EventList.AddRange(eventsFromDb);
+            var eventsFromDb = await _context.Feedbacks!.ToListAsync();
+            FeedbackList.AddRange(eventsFromDb);
             return Page();
         }
     }
 
-    public class EventModel
-    {
-    }
+
 }

@@ -24055,6 +24055,26 @@
       "FilePath": "c:\\Users\\daneil\\Documents\\GitHub\\FeedbackRazorPages\\Feedback\\Feedback.RazorPages\\Pages\\Shared\\_MainLayout.cshtml",
       "TargetPath": "Pages\\Shared\\_MainLayout.cshtml",
       "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\daneil\\Documents\\GitHub\\FeedbackRazorPages\\Feedback\\Feedback.RazorPages\\Pages\\Feedbacks\\Create.cshtml",
+      "TargetPath": "Pages\\Feedbacks\\Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\daneil\\Documents\\GitHub\\FeedbackRazorPages\\Feedback\\Feedback.RazorPages\\Pages\\Feedbacks\\Delete.cshtml",
+      "TargetPath": "Pages\\Feedbacks\\Delete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\daneil\\Documents\\GitHub\\FeedbackRazorPages\\Feedback\\Feedback.RazorPages\\Pages\\Feedbacks\\Edit.cshtml",
+      "TargetPath": "Pages\\Feedbacks\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\daneil\\Documents\\GitHub\\FeedbackRazorPages\\Feedback\\Feedback.RazorPages\\Pages\\Feedbacks\\Visualizar.cshtml",
+      "TargetPath": "Pages\\Feedbacks\\Visualizar.cshtml",
+      "FileKind": "mvc"
     }
   ]
 }

@@ -17,10 +17,12 @@ namespace Feedback.RazorPages.Models
         [Required(ErrorMessage = "Email é obrigatorio")]
         public string? EmailCliente { get; set; }
         [Required(ErrorMessage = "Data é obrigatorio")]
+        [DisplayFormat(DataFormatString= "{0:dd MMM yyyy}")]
         public DateTime? DataFeedback { get; set; }
         [Required(ErrorMessage = "Comentario é obrigatorio")]
         public string? Comentario { get; set; }
         [Required(ErrorMessage = "Avaliacao é obrigatorio")]
+        [Range(1, 5, ErrorMessage = "A avaliação deve estar entre 1 e 5.")]
         public int? Avaliacao { get; set; }
     }
 }

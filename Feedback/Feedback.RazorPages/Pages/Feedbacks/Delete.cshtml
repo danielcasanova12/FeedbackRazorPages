@@ -1,0 +1,27 @@
+@page "{id:int}"
+@model Feedback.RazorPages.Pages.Feedbacks.Delete
+
+
+<h1>Deletar</h1>
+<div>
+    <h1>Detalhes do item para remover</h1>
+
+    <p><strong>Nome do Cliente: </strong>@Model.FeedbackDetails.NomeCliente</p>
+    <p><strong>Email do Cliente: </strong>@Model.FeedbackDetails.EmailCliente</p>
+    <p><strong>Data do Feedback: </strong>@Model.FeedbackDetails.DataFeedback</p>
+    <p><strong>Comentário: </strong>@Model.FeedbackDetails.Comentario</p>
+    <p><strong>Avaliação: </strong>@Model.FeedbackDetails.Avaliacao</p>
+</div>
+
+<form method="post">
+    <div class="form-group">
+        <input type="submit" value="Delete" class="btn btn-danger">
+        <a asp-page="Index" class="btn btn-primary">Voltar à lista</a>
+    </div>
+</form>
+
+
+
+
+
+

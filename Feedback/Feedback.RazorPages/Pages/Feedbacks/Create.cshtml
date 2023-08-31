@@ -1,0 +1,44 @@
+@page
+@model Feedback.RazorPages.Pages.Feedbacks.Create
+@{
+    ViewData["Title"] = "Criar Feedback";
+}
+<h1>Criar Feedback</h1>
+
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="FeedbackDetails.IdFeedback"/>
+            <div class="form-group">
+                <label asp-for="FeedbackDetails.NomeCliente">Nome do Cliente:</label>
+                <input asp-for="FeedbackDetails.NomeCliente" class="text-danger"/>
+                <span asp-validation-for="FeedbackDetails.NomeCliente" class="form-control"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FeedbackDetails.EmailCliente">Email do Cliente:</label>
+                <input asp-for="FeedbackDetails.EmailCliente" class="text-danger"/>
+                <span asp-validation-for="FeedbackDetails.EmailCliente" class="form-control"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FeedbackDetails.DataFeedback">Data do Feedback:</label>
+                <input asp-for="FeedbackDetails.DataFeedback" class="text-danger"/>
+                <span asp-validation-for="FeedbackDetails.DataFeedback" class="form-control"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FeedbackDetails.Comentario">Comentário:</label>
+                <input asp-for="FeedbackDetails.Comentario" class="text-danger"/>
+                <span asp-validation-for="FeedbackDetails.Comentario" class="form-control"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FeedbackDetails.Avaliacao">Avaliação:</label>
+                <input asp-for="FeedbackDetails.Avaliacao" class="text-danger" type="number" min="1" max="5" />
+                <span asp-validation-for="FeedbackDetails.Avaliacao" class="form-control"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" class="btn btn-primary" value="Salvar">
+                <a asp-page="/Feedback/Index" class="btn btn-secondary">Cancelar</a>
+            </div>
+        </form>
+    </div>
+</div>
