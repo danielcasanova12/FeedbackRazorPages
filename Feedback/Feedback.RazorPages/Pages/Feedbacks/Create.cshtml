@@ -34,6 +34,9 @@
                 <label asp-for="FeedbackDetails.Avaliacao">Avaliação:</label>
                 <input asp-for="FeedbackDetails.Avaliacao" class="text-danger" type="number" min="1" max="5" />
                 <span asp-validation-for="FeedbackDetails.Avaliacao" class="form-control"></span>
+                <small class="form-text text-muted">
+                Escolha uma avaliação de 1 a 5, onde 1 é "Muito insatisfeito" e 5 é "Muito satisfeito".
+                </small>
             </div>
             <div class="form-group">
                 <input type="submit" class="btn btn-primary" value="Salvar">
