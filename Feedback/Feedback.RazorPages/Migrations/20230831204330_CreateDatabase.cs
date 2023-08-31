@@ -12,7 +12,7 @@ namespace Feedback.RazorPages.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "Eventos",
+                name: "Feedback",
                 columns: table => new
                 {
                     IdFeedback = table.Column<int>(type: "INTEGER", nullable: false)
@@ -25,7 +25,7 @@ namespace Feedback.RazorPages.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Eventos", x => x.IdFeedback);
+                    table.PrimaryKey("PK_Feedback", x => x.IdFeedback);
                 });
         }
 
@@ -33,7 +33,7 @@ namespace Feedback.RazorPages.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "Eventos");
+                name: "Feedback");
         }
     }
 }

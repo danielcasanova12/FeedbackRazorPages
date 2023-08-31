@@ -45,7 +45,7 @@ namespace Feedback.RazorPages.Migrations
 
                     b.HasKey("IdFeedback");
 
-                    b.ToTable("Eventos", (string)null);
+                    b.ToTable("Feedback", (string)null);
                 });
 #pragma warning restore 612, 618
         }

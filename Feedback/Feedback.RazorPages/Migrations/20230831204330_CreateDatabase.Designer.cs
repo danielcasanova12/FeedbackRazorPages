@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Feedback.RazorPages.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20230831203332_CreateDatabase")]
+    [Migration("20230831204330_CreateDatabase")]
     partial class CreateDatabase
     {
         /// <inheritdoc />
@@ -48,7 +48,7 @@ namespace Feedback.RazorPages.Migrations
 
                     b.HasKey("IdFeedback");
 
-                    b.ToTable("Eventos", (string)null);
+                    b.ToTable("Feedback", (string)null);
                 });
 #pragma warning restore 612, 618
         }
