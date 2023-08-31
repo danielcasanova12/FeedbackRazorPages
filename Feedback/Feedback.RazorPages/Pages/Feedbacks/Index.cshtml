@@ -1,0 +1,37 @@
+@page
+@model Feedback.RazorPages.Pages.Feedbacks.Index
+
+
+@{
+    ViewData["Title"] = "Eventos";
+}
+
+<h1>Lista de Eventos</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>@Html.DisplayNameFor(model => model.EventList[0].NomeCliente)</th>
+            <th>@Html.DisplayNameFor(model => model.EventList[0].EmailCliente)</th>
+            <th>@Html.DisplayNameFor(model => model.EventList[0].Comentario)</th>
+            <th>@Html.DisplayNameFor(model => model.EventList[0].Avaliacao)</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var eventModel in Model.EventList)
+        {
+            <tr>
+                <td>@Html.DisplayFor(model => eventModel.IdFeedback )</td>
+                <td>@Html.DisplayFor(model => eventModel.NomeCliente)</td>
+                <td>@Html.DisplayFor(model => eventModel.NomeCliente)</td>
+                <td>@Html.DisplayFor(model => eventModel.NomeCliente)</td>
+                <td>
+                    <a asp-page="./Edit" asp-route-id="@eventModel.IdFeedback">Alterar</a>
+                    <a asp-page="./Details" asp-route-id="@eventModel.IdFeedback ">Visualizar</a>
+                    <a asp-page="./Delete" asp-route-id="@eventModel.IdFeedback ">Deletar</a>
+                </td>
+            </tr>
+        }
+
+    </tbody>
+</table>

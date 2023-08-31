@@ -61,3 +61,5 @@ C:\Users\daneil\Documents\GitHub\FeedbackRazorPages\Feedback\Feedback.RazorPages
 C:\Users\daneil\Documents\GitHub\FeedbackRazorPages\Feedback\Feedback.RazorPages\bin\Debug\net7.0\runtimes\win-x64\native\e_sqlite3.dll
 C:\Users\daneil\Documents\GitHub\FeedbackRazorPages\Feedback\Feedback.RazorPages\bin\Debug\net7.0\runtimes\win-x86\native\e_sqlite3.dll
 C:\Users\daneil\Documents\GitHub\FeedbackRazorPages\Feedback\Feedback.RazorPages\obj\Debug\net7.0\Feedback.RazorPages.csproj.CopyComplete
+C:\Users\daneil\Documents\GitHub\FeedbackRazorPages\Feedback\Feedback.RazorPages\obj\Debug\net7.0\Feedback.RazorPages.RazorAssemblyInfo.cache
+C:\Users\daneil\Documents\GitHub\FeedbackRazorPages\Feedback\Feedback.RazorPages\obj\Debug\net7.0\Feedback.RazorPages.RazorAssemblyInfo.cs
