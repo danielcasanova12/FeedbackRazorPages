@@ -2,19 +2,17 @@
 @model Feedback.RazorPages.Pages.Feedbacks.Index
 
 
-@{
-    ViewData["Title"] = "Eventos";
-}
+
 <td><a asp-page="/Feedbacks/Create">Criar novo Feedbacks</a></td>
 <h1>Lista de Feedbacks</h1>
 
 <table class="table">
     <thead>
         <tr>
-            <th>@Html.DisplayNameFor(model => model.FeedbackList[0].NomeCliente)</th>
-            <th>@Html.DisplayNameFor(model => model.FeedbackList[0].EmailCliente)</th>
+            <th>Nome</th>
+            <th>Email</th>
             <th>@Html.DisplayNameFor(model => model.FeedbackList[0].Comentario)</th>
-            <th>@Html.DisplayNameFor(model => model.FeedbackList[0].DataFeedback)</th>
+            <th>Data</th>
             <th>@Html.DisplayNameFor(model => model.FeedbackList[0].Avaliacao)</th>
         </tr>
     </thead>
@@ -25,7 +23,7 @@
                         <td>@feedback.NomeCliente</td>
                         <td>@feedback.EmailCliente</td>
                         <td>@feedback.Comentario</td>
-                        <td>@feedback.DataFeedback</td>
+                        <td>@feedback.DataFormatada</td>
                         <td>@feedback.Avaliacao</td>
                         <td>
                             <a asp-page="./Edit" asp-route-id="@feedback.IdFeedback">Alterar</a>

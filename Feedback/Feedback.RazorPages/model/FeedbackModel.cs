@@ -24,5 +24,19 @@ namespace Feedback.RazorPages.Models
         [Required(ErrorMessage = "Avaliacao é obrigatorio")]
         [Range(1, 5, ErrorMessage = "A avaliação deve estar entre 1 e 5.")]
         public int? Avaliacao { get; set; }
+        public string DataFormatada
+        {
+            get
+            {
+                if (DataFeedback.HasValue)
+                {
+                    return DataFeedback.Value.ToString("dd MMM yyyy");
+                }
+                else
+                {
+                    return string.Empty;
+                }
+            }
+        }
     }
 }
