@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Feedback.RazorPages.Data;
 using Feedback.RazorPages.Models;
+using Feedback.RazorPages.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
@@ -13,30 +14,34 @@ namespace Feedback.RazorPages.Pages.Feedbacks
 {
     public class Visualizar : PageModel
     {
-        private readonly AppDbContext _context;
-        public FeedbackModel FeedbackDetails { get; set; } = new();
+        private readonly FeedbackService _feedbackService;
 
-        public Visualizar(AppDbContext context)
+        public Visualizar(FeedbackService feedbackService)
         {
-            _context = context;
+            _feedbackService = feedbackService;
         }
 
-        public async Task<IActionResult> OnGetAsync(int? id)
+        public FeedbackModel FeedbackDetails { get; set; } = new FeedbackModel();
+
+        public IActionResult OnGet(int? id)
         {
-            if (id == null || _context.Feedbacks == null)
+            if (id == null)
             {
                 return NotFound();
             }
 
-            var feedbackModel = await _context.Feedbacks.FirstOrDefaultAsync(f => f.IdFeedback == id);
-            if (feedbackModel == null)
+            FeedbackDetails = new FeedbackModel(); 
+
+            var feedback = _feedbackService.GetFeedbackById(id.Value);
+
+            if (feedback == null)
             {
                 return NotFound();
             }
 
-            FeedbackDetails = feedbackModel;
+            FeedbackDetails = feedback;
 
             return Page();
-        }
+}
     }
 }

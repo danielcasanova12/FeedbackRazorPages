@@ -19,21 +19,21 @@
         </tr>
     </thead>
     <tbody>
-        @foreach (var eventModel in Model.FeedbackList)
-        {
-            <tr>
-                <td>@Html.DisplayFor(model => eventModel.IdFeedback )</td>
-                <td>@Html.DisplayFor(model => eventModel.NomeCliente)</td>
-                <td>@Html.DisplayFor(model => eventModel.EmailCliente )</td>
-                <td>@Html.DisplayFor(model => eventModel.DataFeedback )</td>
-                <td>@Html.DisplayFor(model => eventModel.Avaliacao  )</td>
-                <td>
-                    <a asp-page="./Edit" asp-route-id="@eventModel.IdFeedback">Alterar</a>
-                    <a asp-page="./Visualizar" asp-route-id="@eventModel.IdFeedback ">Visualizar</a>
-                    <a asp-page="./Delete" asp-route-id="@eventModel.IdFeedback ">Deletar</a>
-                </td>
-            </tr>
-        }
+        @foreach (var feedback in Model.FeedbackList)
+                {
+                    <tr>
+                        <td>@feedback.NomeCliente</td>
+                        <td>@feedback.EmailCliente</td>
+                        <td>@feedback.Comentario</td>
+                        <td>@feedback.DataFeedback</td>
+                        <td>@feedback.Avaliacao</td>
+                        <td>
+                            <a asp-page="./Edit" asp-route-id="@feedback.IdFeedback">Alterar</a>
+                            <a asp-page="./Visualizar" asp-route-id="@feedback.IdFeedback">Visualizar</a>
+                            <a asp-page="./Delete" asp-route-id="@feedback.IdFeedback">Deletar</a>
+                        </td>
+                    </tr>
+                }
 
     </tbody>
 </table>

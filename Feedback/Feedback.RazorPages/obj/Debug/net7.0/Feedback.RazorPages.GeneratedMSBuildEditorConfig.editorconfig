@@ -16,6 +16,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = c:\Users\daneil\Documents\GitHub\FeedbackRazorPages\Feedback\Feedback.RazorPages
 build_property._RazorSourceGeneratorDebug = 
 
+[c:/Users/daneil/Documents/GitHub/FeedbackRazorPages/Feedback/Feedback.RazorPages/Pages/FeedbacksModel.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRmVlZGJhY2tzTW9kZWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [c:/Users/daneil/Documents/GitHub/FeedbackRazorPages/Feedback/Feedback.RazorPages/Pages/Feedbacks/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRmVlZGJhY2tzXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

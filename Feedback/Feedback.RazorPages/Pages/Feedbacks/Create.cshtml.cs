@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Feedback.RazorPages.Data;
 using Feedback.RazorPages.Models;
+using Feedback.RazorPages.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
@@ -12,16 +13,17 @@ namespace Feedback.RazorPages.Pages.Feedbacks
 {
     public class Create : PageModel
     {
-        private readonly AppDbContext _context;
+              private readonly FeedbackService _feedbackService;
+
         [BindProperty]
         public FeedbackModel FeedbackDetails { get; set; } = new();
 
-        public Create(AppDbContext context)
+        public Create(FeedbackService feedbackService)
         {
-            _context = context;
+            _feedbackService = feedbackService;
         }
 
-        public async Task<IActionResult> OnPostAsync()
+        public IActionResult OnPost()
         {
             if (!ModelState.IsValid)
             {
@@ -30,8 +32,9 @@ namespace Feedback.RazorPages.Pages.Feedbacks
 
             try
             {
-                _context.Feedbacks!.Add(FeedbackDetails);
-                await _context.SaveChangesAsync();
+                _feedbackService.AddFeedback(FeedbackDetails);
+
+                // Redirecionar para a página de feedbacks ou fazer algo mais, se necessário.
                 return RedirectToPage("/Feedbacks/Index");
             }
             catch (System.Exception)
@@ -39,6 +42,5 @@ namespace Feedback.RazorPages.Pages.Feedbacks
                 return Page();
             }
         }
-
     }
 }

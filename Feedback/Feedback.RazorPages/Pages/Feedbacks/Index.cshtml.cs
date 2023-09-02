@@ -8,25 +8,27 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
+using Feedback.RazorPages.Services;
 
 namespace Feedback.RazorPages.Pages.Feedbacks
 {
     public class Index : PageModel
-    {
-        private readonly AppDbContext _context;
-        public List<FeedbackModel> FeedbackList { get; set; } = new();
-
-        public Index(AppDbContext context)
         {
-            _context = context;
+        private readonly FeedbackService _feedbackService;
+
+        public Index(FeedbackService feedbackService)
+        {
+            _feedbackService = feedbackService;
         }
 
-        public async Task<IActionResult> OnGetAsync()
+
+        public List<FeedbackModel> FeedbackList { get; set; } = new List<FeedbackModel>();
+
+        public void OnGet()
         {
-            var eventsFromDb = await _context.Feedbacks!.ToListAsync();
-            FeedbackList.AddRange(eventsFromDb);
-            return Page();
+            FeedbackList = _feedbackService.GetAllFeedbacks();
         }
+
     }
 
 
